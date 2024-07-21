@@ -1,0 +1,30 @@
+/* src/styles/MainPage.css */
+.main-page {
+    padding: 20px;
+  }
+  
+  .works {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+  }
+  
+  .works img {
+    width: 200px;
+    height: auto;
+  }
+  
+  /* 너비가 1200px 이하인 화면에서 이미지 크기 조정 */
+  @media (max-width: 1200px) {
+    .works img {
+      width: 150px;
+    }
+  }
+  
+  /* 너비가 800px 이하인 화면에서 이미지 크기 조정 */
+  @media (max-width: 800px) {
+    .works img {
+      width: 100px;
+    }
+  }
+  
