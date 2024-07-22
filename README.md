@@ -1,3 +1,9 @@
+# used version
+
+node.js 20.15.1
+react 5.0.1
+npm 10.7.0
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
