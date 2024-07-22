@@ -1,30 +1,110 @@
-/* src/styles/MainPage.css */
-.main-page {
-    padding: 20px;
+.main-container {
+  height: 100vh;
+  padding: 20px;
+  background-color: #BDE3FF;
+}
+
+.carousel-section {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative; /* 버튼을 절대 위치로 배치하기 위해 부모에 상대 위치 추가 */
+}
+
+.carousel-section h2 {
+  margin-bottom: 20px;
+  margin-left: 16px;
+  text-align: center;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  max-width: 1200px; /* 고정된 최대 너비 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+  overflow: hidden; /* 요소가 튀어나가지 않도록 함 */
+}
+
+.carousel-items {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 25%; /* 기본적으로 4개의 아이템을 표시 */
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 5px;
+  background-color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 1; /* 버튼이 아이템 위에 오도록 설정 */
+  position: absolute; /* 절대 위치로 설정 */
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%; /* 모서리를 동그랗게 설정 */
+}
+
+.carousel-button:disabled {
+  background-color: #ccc;
+}
+
+.prev-button {
+  left: 10px; /* 부모 컨테이너의 왼쪽에 위치 */
+}
+
+.next-button {
+  right: 10px; /* 부모 컨테이너의 오른쪽에 위치 */
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.active {
+  background-color: #007bff;
+}
+
+@media (min-width: 600px) {
+  .carousel-item {
+    flex: 0 0 50%; /* 화면이 좁아지면 2개의 아이템을 표시 */
   }
-  
-  .works {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
+}
+
+@media (min-width: 900px) {
+  .carousel-item {
+    flex: 0 0 25%; /* 큰 화면에서는 4개의 아이템을 표시 */
   }
-  
-  .works img {
-    width: 200px;
-    height: auto;
+}
+
+@media (max-width: 600px) {
+  .carousel-item {
+    flex: 0 0 100%; /* 아주 작은 화면에서는 1개의 아이템을 표시 */
   }
-  
-  /* 너비가 1200px 이하인 화면에서 이미지 크기 조정 */
-  @media (max-width: 1200px) {
-    .works img {
-      width: 150px;
-    }
-  }
-  
-  /* 너비가 800px 이하인 화면에서 이미지 크기 조정 */
-  @media (max-width: 800px) {
-    .works img {
-      width: 100px;
-    }
-  }
-  
+}

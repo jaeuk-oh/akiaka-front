@@ -8,7 +8,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar-logo">나의 웹서비스</Link>
+      <Link to="/" className="navbar-logo">O늘의 meta</Link>
       <div className="navbar-links">
         {isLoggedIn ? (
           <span>{username}</span>

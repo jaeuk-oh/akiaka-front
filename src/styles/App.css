@@ -1,5 +1,7 @@
 /* src/styles/App.css */
 body {
+  width: auto;
+  height: auto;
   font-family: Arial, sans-serif;
 }
 
@@ -12,11 +14,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.item {
-  flex: 1 1 calc(33.333% - 20px);
-  margin: 10px;
 }
 
 /* 너비가 1200px 이하인 화면에서 2열 레이아웃 */
