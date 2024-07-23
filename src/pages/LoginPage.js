@@ -19,14 +19,14 @@ const LoginPage = ({ onLogin }) => {
 
   return (
     <div className="login-page">
-      <h2>Login</h2>
+      <h2>O늘의 meta</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="username">아이디 : </label>
           <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} required />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">비밀번호 : </label>
           <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         </div>
         <button type="submit">Login</button>

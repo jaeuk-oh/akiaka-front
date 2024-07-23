@@ -19,10 +19,10 @@ const SignupPage = () => {
 
   return (
     <div className="signup-page">
-      <h2>Sign Up</h2>
+      <h2>회원가입</h2>
       <form onSubmit={handleSubmit} className="signup-form">
         <div>
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="username">아이디 : </label>
           <input
             type="text"
             id="username"
@@ -32,7 +32,7 @@ const SignupPage = () => {
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">비밀번호 : </label>
           <input
             type="password"
             id="password"
