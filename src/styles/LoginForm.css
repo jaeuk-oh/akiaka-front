@@ -68,6 +68,8 @@
   height: fit-content;
   margin-top: 20px;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .social-login h3 {

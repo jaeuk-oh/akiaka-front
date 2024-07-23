@@ -1,0 +1,36 @@
+/* Auth.css */
+
+.kakao-login-button {
+  width: 206px;
+  height: 40px;
+  background-color: #ffeb00 !important;
+  border: none !important;
+  color: #3c1e1e !important;
+  padding: 10px 20px !important;
+  font-size: 10px !important;
+  cursor: pointer !important;
+  border-radius: 5px !important;
+  margin: 10px 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kakao-logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.google-login-button {
+  width: 130px !important;
+  background-color: #4285f4 !important;
+  border: none !important;
+  color: white !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  border-radius: 5px !important;
+  margin: 10px !important;
+}
+
