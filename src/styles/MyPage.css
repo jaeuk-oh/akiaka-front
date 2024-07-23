@@ -2,8 +2,8 @@
 
 .mypage-body {
   display: flex;
-  height: calc(100vh - 60px); /* Adjust this value based on the height of your Navbar */
-  width: 100vw; /* 전체 너비를 차지하도록 설정 */
+  height: 100%; /* Adjust this value based on the height of your Navbar */
+  width: 100%; /* 전체 너비를 차지하도록 설정 */
   margin: 0;
   padding: 0;
   overflow: hidden;
