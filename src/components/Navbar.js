@@ -1,24 +1,120 @@
+// // Navbar.js
+
+// import React from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import '../styles/Navbar.css';
+
+// const Navbar = ({ isLoggedIn, user, onLogout }) => {
+//   const navigate = useNavigate();
+
+//   const handleNavigation = (path) => {
+//     navigate(path);
+//   };
+
+//   const handleMyPageClick = () => {
+//     navigate('/mypage');
+//   };
+  
+//   // 버튼에 onClick 이벤트 추가
+//   <button onClick={handleMyPageClick}>My Page</button>
+  
+
+//   return (
+//     <nav className="navbar">
+//       <ul className="navbar-left">
+//         <li>
+//           <button onClick={() => handleNavigation('/')}>O늘의 meta</button>
+//         </li>
+//       </ul>
+//       <ul className="navbar-right">
+//         {isLoggedIn ? (
+//           <>
+//             <li>
+//               <span>{user.username}</span>
+//             </li>
+//             <li>
+//               <button onClick={handleMyPageClick}>마이페이지</button>
+//             </li>
+//             <li>
+//               <button onClick={onLogout}>로그아웃</button>
+//             </li>
+//           </>
+//         ) : (
+//           <>
+//             <li>
+//               <button onClick={() => handleNavigation('/login')}>로그인</button>
+//             </li>
+//             <li>
+//               <button onClick={() => handleNavigation('/signup')}>회원가입</button>
+//             </li>
+//             <li>
+//               <button onClick={handleMyPageClick}>마이페이지</button>
+//             </li>
+//           </>
+//         )}
+//       </ul>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
+// Navbar.js
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Navbar.css';
 
-function Navbar() {
-  const isLoggedIn = false; // Replace with actual login state
-  const username = 'user123'; // Replace with actual username if logged in
+const Navbar = ({ isLoggedIn, user, onLogout }) => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
+  const handleMyPageClick = () => {
+    navigate('/mypage/my_info');
+  };
 
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar-logo">O늘의 meta</Link>
-      <div className="navbar-links">
+      <ul className="navbar-left">
+        <li>
+          <button onClick={() => handleNavigation('/')}>O늘의 meta</button>
+        </li>
+      </ul>
+      <ul className="navbar-right">
         {isLoggedIn ? (
-          <span>{username}</span>
+          <>
+            <li>
+              <span>{user.username}</span>
+            </li>
+            <li>
+              <button onClick={handleMyPageClick}>My Page</button>
+            </li>
+            <li>
+              <button onClick={onLogout}>Logout</button>
+            </li>
+          </>
         ) : (
-          <Link to="/login">로그인 / 회원가입</Link>
+          <>
+            <li>
+              <button onClick={() => handleNavigation('/login')}>Login</button>
+            </li>
+            <li>
+              <button onClick={() => handleNavigation('/signup')}>Sign Up</button>
+            </li>
+            <li>
+              <button onClick={handleMyPageClick}>My Page</button>
+            </li>
+          </>
         )}
-        <Link to="/mypage">마이페이지</Link>
-      </div>
+      </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;
+
+
+

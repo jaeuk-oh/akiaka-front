@@ -1,31 +1,28 @@
-/* src/styles/App.css */
-body {
-  width: auto;
-  height: auto;
+/* App.css */
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
 
-.App {
-  text-align: center;
+.app-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* 기본 스타일 */
-.container {
+.box {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-/* 너비가 1200px 이하인 화면에서 2열 레이아웃 */
-@media (max-width: 1200px) {
-  .item {
-    flex: 1 1 calc(50% - 20px);
-  }
-}
-
-/* 너비가 800px 이하인 화면에서 1열 레이아웃 */
-@media (max-width: 800px) {
-  .item {
-    flex: 1 1 100%;
-  }
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  margin: 0; /* 간격 제거 */
+  padding: 0; /* 간격 제거 */
 }
