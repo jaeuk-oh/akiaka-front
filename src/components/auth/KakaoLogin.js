@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../../styles/Auth.css';
+import './Auth.css';
 import KakaoLogo from '../../assets/btn_kakao 1.svg'; // SVG 파일 임포트
 
 const KakaoLogin = () => {
@@ -38,7 +38,7 @@ const KakaoLogin = () => {
   return (
     <button onClick={loginWithKakao} className="kakao-login-button">
       <img src={KakaoLogo} alt="Kakao Logo" className="kakao-logo" />
-      Kakao
+      카카오톡 로그인
     </button>
   );
 };

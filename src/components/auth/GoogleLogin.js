@@ -1,25 +1,26 @@
-// GoogleLogin.js
-
 import React from 'react';
-import { GoogleLogin } from 'react-google-login';
-import '../../styles/Auth.css';
+import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import './Auth.css';
 
-const GoogleLoginComponent = () => {
-  const responseGoogle = (response) => {
-    console.log(response);
-    // 추가적인 사용자 정보 처리 로직
-  };
-
-  return (
+const GoogleLoginComponent = () => (
+  <GoogleOAuthProvider clientId="YOUR_GOOGLE_CLIENT_ID">
     <GoogleLogin
-      clientId="YOUR_GOOGLE_CLIENT_ID"
-      buttonText="Google"
-      onSuccess={responseGoogle}
-      onFailure={responseGoogle}
-      cookiePolicy={'single_host_origin'}
-      className="google-login-button"
+      onSuccess={credentialResponse => {
+        console.log(credentialResponse);
+      }}
+      onError={() => {
+        console.log('Login Failed');
+      }}
+      render={renderProps => (
+        <button
+          onClick={renderProps.onClick}
+          disabled={renderProps.disabled}
+          className="google-login-button"
+        >
+        </button>
+      )}
     />
-  );
-};
+  </GoogleOAuthProvider>
+);
 
 export default GoogleLoginComponent;

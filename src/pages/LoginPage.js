@@ -19,7 +19,7 @@ const LoginPage = ({ onLogin }) => {
 
   return (
     <div className="login-page">
-      <h2>Login</h2>
+      <h2>O늘의 meta</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">E-mail:</label>

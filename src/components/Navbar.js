@@ -102,9 +102,6 @@ const Navbar = ({ isLoggedIn, user, onLogout }) => {
               <button onClick={() => handleNavigation('/login')}>Login</button>
             </li>
             <li>
-              <button onClick={() => handleNavigation('/signup')}>Sign Up</button>
-            </li>
-            <li>
               <button onClick={handleMyPageClick}>My Page</button>
             </li>
           </>
